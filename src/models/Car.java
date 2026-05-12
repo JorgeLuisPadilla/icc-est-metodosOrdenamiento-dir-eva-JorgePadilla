@@ -2,16 +2,16 @@ package models;
 
 public class Car {
 
-  private String brand;
+  private String name;
   private int year;
 
-  public Car(String brand, int year) {
-    this.brand = brand;
+  public Car(String name, int year) {
+    this.name = name;
     this.year = year;
   }
 
-  public String getBrand() {
-    return brand;
+  public String getName() {
+    return name;
   }
 
   public int getYear() {
@@ -20,6 +20,6 @@ public class Car {
 
   @Override
   public String toString() {
-    return "Car{brand='" + brand + "', year=" + year + "}";
+    return "Car{Name='" + name + "', year=" + year + "}";
   }
 }
