@@ -15,7 +15,7 @@ public class CarController {
       for (int j = 0; j < cars.length - 1 - i; j++) {
 
         if (cars[j].getName()
-            .compareToIgnoreCase(cars[j + 1].getName()) > 0) {
+            .compareTo(cars[j + 1].getName()) > 0) {
 
           Car aux = cars[j];
           cars[j] = cars[j + 1];
