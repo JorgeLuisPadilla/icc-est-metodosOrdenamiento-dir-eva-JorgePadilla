@@ -3,14 +3,9 @@ import models.Car;
 
 public class App {
     public static void main(String[] args) throws Exception {
-
         CarController controller = new CarController();
         Car[] cars = makeCarsList();
-
-        // Ordenar
         controller.sortByName(cars);
-
-        // Mostrar
         for (Car car : cars) {
             System.out.println(car);
         }
