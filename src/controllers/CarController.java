@@ -4,23 +4,24 @@ import models.Car;
 
 public class CarController {
 
-  public void sortByName(Car[] cars) {
+    public void sortByName(Car[] cars) {
 
-    if (cars == null || cars.length <= 1) {
-      return;
-    }
-
-    for (int i = 0; i < cars.length - 1; i++) {
-
-      for (int j = 0; j < cars.length - 1 - i; j++) {
-
-        if (cars[j].getName().compareToIgnoreCase(cars[j + 1].getName()) > 0) {
-
-          Car aux = cars[j];
-          cars[j] = cars[j + 1];
-          cars[j + 1] = aux;
+        if (cars == null || cars.length <= 1) {
+            return;
         }
-      }
+
+        for (int i = 0; i < cars.length - 1; i++) {
+
+            for (int j = 0; j < cars.length - 1 - i; j++) {
+
+                if (cars[j].getBrand()
+                        .compareToIgnoreCase(cars[j + 1].getBrand()) > 0) {
+
+                    Car aux = cars[j];
+                    cars[j] = cars[j + 1];
+                    cars[j + 1] = aux;
+                }
+            }
+        }
     }
-  }
 }
