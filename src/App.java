@@ -2,31 +2,21 @@ import controllers.CarController;
 import models.Car;
 
 public class App {
-
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         CarController controller = new CarController();
-
         Car[] cars = makeCarsList();
 
-        System.out.println("ANTES:");
-        showCars(cars);
-
+        // Ordenar
         controller.sortByName(cars);
 
-        System.out.println("\nDESPUÉS:");
-        showCars(cars);
-    }
-
-    public static void showCars(Car[] cars) {
-
+        // Mostrar
         for (Car car : cars) {
             System.out.println(car);
         }
     }
 
     public static Car[] makeCarsList() {
-
         Car[] cars = new Car[20];
 
         cars[0] = new Car("Toyota", 2020);
